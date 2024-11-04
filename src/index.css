@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
+}
+
+/* Smooth transitions for all elements */
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.form-wrapper {
+  width: 300px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  transform: translateY(0);
+  transition: transform 0.2s ease;
+}
+
+.form-wrapper:hover {
+  transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tab animations */
+.MuiTab-root {
+  transition: transform 0.2s ease;
+}
+
+.MuiTab-root:hover {
+  transform: translateY(-2px);
+}
+
+/* List item animations */
+.MuiListItem-root {
+  animation: slideIn 0.3s ease-out;
+  transition: background-color 0.2s ease;
+}
+
+.MuiListItem-root:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
